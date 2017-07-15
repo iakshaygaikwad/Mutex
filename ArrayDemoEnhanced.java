@@ -1,9 +1,5 @@
 
 import java.util.Scanner;
-
-/**
- * Created by Akshay on 14-07-2017.
- */
 public class ArrayDemoEnhanced {
 
     static String evenNumbers = "";
