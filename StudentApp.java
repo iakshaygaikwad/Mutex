@@ -2,45 +2,38 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Akshay on 13-07-2017.
- */
 public class StudentApp{
 
-    static Student acceptData( BufferedReader bufferedReader) throws IOException
+    String name;
+    int rollNumber;
+    float marks;
 
-    {
-        Student student = new Student();
+    public void setData(BufferedReader bufferedReader, Student student) throws  IOException{
+
         System.out.println("Enter Name : ");
-        student.name = bufferedReader.readLine();
+        name = bufferedReader.readLine();
+        student.setName(name);
         System.out.println("Enter Roll Number : ");
-        student.rollNumber = Integer.parseInt(bufferedReader.readLine());
+        rollNumber = Integer.parseInt(bufferedReader.readLine());
+        student.setRollNumber(rollNumber);
         System.out.println("Enter Marks : ");
-        student.marks = Float.parseFloat(bufferedReader.readLine());
+        marks = Float.parseFloat(bufferedReader.readLine());
+        student.setMarks(marks);
 
-        return student;
     }
+    public void getData(Student student){
+        System.out.println("Name = " + student.getName());
+        System.out.println("Roll Number = " + student.getRollNumber());
+        System.out.println("Marks = " + student.getMarks());
 
-    static void printData(Student student)
-    {
-        System.out.println("\n");
-        System.out.println("Name = " +student.name);
-        System.out.println("Roll Number = "+student.rollNumber);
-        System.out.println("Marks = "+student.marks);
     }
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-
-        Student student1 = acceptData(bufferedReader);
-        Student student2 = acceptData(bufferedReader);
-        Student student3 = acceptData(bufferedReader);
-
-        printData(student1);
-        printData(student2);
-        printData(student3);
+        Student student = new Student();
+        new StudentApp().setData(bufferedReader, student);
+        new StudentApp().getData(student);
 
     }
 
