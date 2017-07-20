@@ -1,14 +1,21 @@
 
 public class StudentConstructorPractice  {
 
-    private static StudentConstructorPractice s = new StudentConstructorPractice();
+    private String name = "";
+
      private StudentConstructorPractice()
     {
         System.out.println("Default Constructor....");
     }
-
-     public static Object getObject()
+    private StudentConstructorPractice(String name)
     {
-        return s;
+        this.name = name;
+        System.out.println(name);
+    }
+
+    public static void getObject(String name)
+    {
+        StudentConstructorPractice s1 = new StudentConstructorPractice();
+        StudentConstructorPractice s = new StudentConstructorPractice(name);
     }
 }

@@ -64,3 +64,27 @@ public class StringDemo {
     }
 
 }
+
+/*
+*
+        if(!new StringDemo().isNumber((arrayInput))) {
+                }
+        else {
+            System.out.println("ERROR NUMBER");
+        }
+
+
+*     public boolean isNumber(char[] arrayInput)
+    {
+        try {
+            int x = 0;
+            for (int i = 0; i<arrayInput.length ; i++ )
+                if (Integer.parseInt(String.valueOf(arrayInput[i])) >= 0)
+                    continue;
+                    System.out.println(x = Integer.parseInt(String.valueOf(arrayInput[i])));
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }*/
