@@ -3,7 +3,7 @@ package mall;
 public class Toy extends  Item {
 
 
-    final float gstRate = 18.0f;
+    final float GST_RATE = 18.0f;
 
     void buyItem(String itemName, float price, int quantity)
     {
@@ -13,7 +13,7 @@ public class Toy extends  Item {
 
     float getGST(float price, int quantity)
     {
-        gstValue = ((price*gstRate)/100)*quantity;
+        gstValue = ((price*GST_RATE)/100)*quantity;
         return gstValue;
     }
 
