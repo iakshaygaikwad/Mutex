@@ -9,9 +9,10 @@ public class Invoice {
         System.out.println("\n========================================================================");
         for (Item items : item)
         {
-            System.out.printf("%-10s\t\t%f\t\t\t%d\t\t%f\t\t%f",items.itemName,items.price,items.quantity,items.gstValue,(items.gstValue+items.price));
+            float gst = items.getGST(items.price,items.quantity);
+            System.out.printf("%-10s\t\t%f\t\t\t%d\t\t%f\t\t%f",items.itemName,items.price,items.quantity,gst,(gst+items.price));
             System.out.println();
-            grandTotal = grandTotal + (items.gstValue+items.price);
+            grandTotal = grandTotal + (gst+items.price);
         }
         System.out.println("------------------------------------------------------------------------");
         System.out.printf("Total : %63f",grandTotal);
