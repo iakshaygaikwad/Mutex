@@ -1,4 +1,4 @@
-package CollectionPractice.List;
+package collectionpractice.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;

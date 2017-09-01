@@ -1,4 +1,4 @@
-package CollectionPractice.List;
+package collectionpractice.list;
 
 public class Calculator {
 
